@@ -1,0 +1,6 @@
+num_list = list(range(10))
+print('num_list(up side down):', num_list[::-1])
+print('index >= 5(up side down) :', num_list[4::-1])
+print('index < 5(up side down) :', num_list[:4:-1])
+print('even(up side down) :', num_list[8::-2])
+print('odd(up side down) :', num_list[::-2])

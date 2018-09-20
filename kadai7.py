@@ -1,0 +1,6 @@
+list1 = list(range(0, 10))
+list2 = list(range(10, 20))
+print('list type :', type(list1))
+print('list1 :', list1)
+print('list2 :', list2)
+print('list1 + list2 :', [i + j for (i, j) in zip(list1, list2)])
