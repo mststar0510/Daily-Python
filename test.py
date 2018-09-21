@@ -1,10 +1,5 @@
-import re
-
-urls = (
-    'www.shibaura-it.ac.jp/',
-    'https://www.dendai.ac.jp/',
-    'https://www.tcu.ac.jp/',
-    'https://www.kogakuin.ac.jp/',
-)
-m = re.split("\.",urls[0])
-print(m[1])
+# 文字列のリスト
+strings = ["1", "2", "3"]
+iter=iter(strings)
+print(getattr(strings,'__iter__'))
+print(getattr(iter,'__iter__'))
