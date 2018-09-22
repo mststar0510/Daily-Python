@@ -1,17 +1,14 @@
 import random
 class Cat:
     def __init__(self,name):
-        self.flag=False
-        self.sleepy=False
+        self.flag=True
         self.name=name
 
-    def mew(self,times=True):
+    def mew(self,times=1):
         if self.flag==True:
             return 'PURR'
-        elif self.flag==False:
+        else:
             return 'MEW! ' * times
-        if self.sleepy=True:
-            return 'zzz'
 
     def eat(self,food='cat_food'):
         self.flag=True
@@ -24,23 +21,13 @@ class Cat:
             return cat.mew()
         else:
             return 'BUMP!'
+        print(self.flag)
+
     def hear(self,noise):
         if noise==self.name:
             return 'MEW?'
         else:
             return '...'
-    def sleep(self):
-        self.sleepy=True
-        return 'zzz'
-
-    def wake(self):
-        self.sleepy=False
-        return 'MEW!'
-
 bella = Cat('bella')
-print(bella.sleep())
-print(bella.jump())
 print(bella.hear('bella'))
-print(bella.wake())
-print(bella.mew())
-print(bella.hear('bella'))
+print(bella.hear('tigger'))
