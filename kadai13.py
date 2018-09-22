@@ -1,16 +1,7 @@
 def isiterable(word):
-    try:
-        getattr(word,'__iter__')
-        print('イテラブルです。')
-    except:
-        print('イテラブルではありません。')
-
+    return print(hasattr(word,'__iter__'))
 def isiterator(word):
-    try:
-        getattr(word,'__next__')
-        print('イテレーターです。')
-    except :
-        print('イテレーターではありません。')
+    return print(hasattr(word,'__next__'))
 
 list=[1,2,3,4]
 word1='a'
