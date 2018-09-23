@@ -1,39 +1,44 @@
 import random
 class Cat:
+
     def __init__(self,name):
         self.eat=False
         self.sleepy=False
         self.name=name
 
+    def sleeping(func):
+        def wrapper(self,*args,**kwargs):
+            if self.sleepy==True:
+                return 'zzz'
+            return func(self,*args,**kwargs)
+        return wrapper
+
+    @sleeping
     def mew(self,times=True):
-        if self.sleepy==True:
-            return 'zzz'
-        elif self.eat==True:
+        if self.eat==True:
             return 'PURR'
-        elif self.eat==False:
+        else:
             return 'MEW! ' * times
 
+    @sleeping
     def eat(self,food='cat_food'):
-        if self.sleepy==True:
-            return self.mew()
         self.eat=True
-
+    @sleeping
     def jump(self):
-        if self.sleepy==True:
-            return self.mew()
         half=random.randint(0,1)
         if half==0:
             cat=Cat()
             return cat.mew()
         else:
             return 'BUMP!'
+
+    @sleeping
     def hear(self,noise):
-        if self.sleepy==True:
-            return self.mew()
-        elif noise==self.name:
+        if noise==self.name:
             return 'MEW?'
         else:
             return '...'
+
     def sleep(self):
         self.sleepy=True
         return 'zzz'
