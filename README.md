@@ -1,7 +1,6 @@
 
 Answers of Python Excercise
-===========================
-
+===========================  
 以下にあるDaily Python Excerciseの回答集です。　
 https://gist.github.com/iamhirok
 ==================================================  
