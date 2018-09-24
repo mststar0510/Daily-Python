@@ -9,11 +9,13 @@ class animal:
             return {'is_alive' : self.is_alive, 'energy' : self.energy}
 
 def live(method):
+    def __init__(self):
+        self.is_alive=animai.is_alive
     def wrapper(self, *args, **kwargs):
-        if animal.is_alive:
+        if self.is_alive:
             return method(self, *args, **kwargs)
     return wrapper
-
+animal(False)
 
 class Lion(animal):
     def __init__(self, is_alive=True, energy=10):
