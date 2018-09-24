@@ -2,7 +2,7 @@ import random
 class Cat:
 
     def __init__(self,name):
-        self.eat=False
+        self.hungry=True
         self.sleepy=False
         self.name=name
 
@@ -15,14 +15,14 @@ class Cat:
 
     @sleeping
     def mew(self,times=True):
-        if self.eat==True:
+        if self.hungry==False:
             return 'PURR'
         else:
             return 'MEW! ' * times
 
     @sleeping
     def eat(self,food='cat_food'):
-        self.eat=True
+        self.hungry=False
     @sleeping
     def jump(self):
         half=random.randint(0,1)
